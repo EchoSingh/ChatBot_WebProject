@@ -15,8 +15,8 @@ ChatBot_WebProject/
 ├── public/
 │   ├── Images/
 │   │   ├── chat.js
+│   |   ├── index.html
 │   │   └── styles.css
-│   ├── index.html
 ├── report files/
 │   ├── WEB_DEVELOPMENT_LAB_Mini_Project_Report-4th sem-combined FINAL.docx
 │   └── WEB_DEVELOPMENT_LAB_Mini_Project_Report-4th sem-combined FINAL.pdf
