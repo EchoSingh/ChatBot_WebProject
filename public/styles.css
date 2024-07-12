@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@keyframes backgroundZoom {
+    0% {
+        background-size: 100% 100%;
+    }
+    50% {
+        background-size: 150% 150%;
+    }
+    100% {
+        background-size: 100% 100%;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #5f2bdb;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    background-image: radial-gradient(circle, #f0259b, #5f2bdb, #f4bde1, #fc77e5, #602adb);
+    background-size: cover;
+    animation: backgroundZoom 10s infinite alternate ease-in-out;
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.subheading {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.grid-container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+}
+
+.heading1 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    letter-spacing: 20px;
+    font-weight: 500;
+}
+
+#Brand {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.cloud {
+    width: 50px;
+    height: 50px;
+    position: relative; /* Allows for positioning the element */
+    animation: enterFromLeft 2s ease forwards; /* Animation name, duration, timing function, fill mode */
+}
+
+@keyframes enterFromLeft {
+    from {
+        left: -100%; /* Start from off-screen to the left */
+    }
+    to {
+        left: 0; /* End at the original position */
+    }
+}
+
+#new-chat-btn {
+    margin: 10px;
+}
+
+.logo {
+    width: 60px; /* Example size, adjust as needed */
+    height: auto;
+}
+
+.mid-section {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    background-color: #343541;
+    border-radius: 5%;
+}
+
+.line1 {
+    border-top: 1px solid black;
+    margin: 10px 0;
+}
+
+.side-btn {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to right, #fc77e5, #602adb);
+    border: none;
+    font-weight: medium;
+    border-radius: 50%;
+    color: white;
+    font-size: medium;
+    padding: 10px;
+    cursor: pointer;
+}
+
+@keyframes fadeBackground {
+    0% {
+        background-image: linear-gradient(to right, #fc77e5, #602adb);
+    }
+    100% {
+        background-image: linear-gradient(to right, #602adb, #fc77e5);
+    }
+}
+
+.side-btn .icon {
+    width: 30px;
+    height: 25px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    grid-row-start: -1;
+}
+
+.pic {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.name {
+    color: white;
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+span {
+    color: white;
+    cursor: pointer;
+}
+
+.right {
+    background-color: #343541;
+    border-radius: 40px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 80%;
+}
+
+.chat-window {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 800px;
+}
+
+.input-area {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.input-field {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    font-size: large;
+    border-radius: 10px;
+    margin-right: 10px;
+    color: white;
+    background-color: #303136;
+}
+
+.send-button {
+    border: none;
+    cursor: pointer;
+    width: 30px;
+}
+
+.send-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.user-message, .response-message {
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: #a15bfc;
+    align-self: flex-end;
+}
+
+.response-message {
+    background-color: grey;
+    align-self: flex-start;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* For user messages, switch to flex-start for responses if needed */
+    margin-bottom: 10px;
+}
+
+.profile-img {
+    width: 30px; /* Set the size of the profile image */
+    height: 30px;
+    border-radius: 50%; /* Makes the image circular */
+    margin-top: 4px; /* Adds a small space between the message and the profile image */
+    align-self: center; /* Aligns the image below the message */
+}
+
+#preloader {
+    box-sizing: border-box;
+    background: #000 url(public\Images\preload.gif) no-repeat center center;
+    background-size: 30%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.centered-messages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-bubble {
+    background: linear-gradient(to bottom right, #7f00ff, #e100ff); /* Gradient background */
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 10px;
+    max-width: 200px; /* Set maximum width for bubble */
+    word-wrap: break-word; /* Ensure long messages wrap */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+}
+
+.hidden {
+    display: none;
+}
