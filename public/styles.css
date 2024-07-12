@@ -228,7 +228,7 @@ span {
 
 #preloader {
     box-sizing: border-box;
-    background: #000 url(public\Images\preload.gif) no-repeat center center;
+    background: #000 url(Images\preload.gif) no-repeat center center;
     background-size: 30%;
     height: 100vh;
     width: 100%;
