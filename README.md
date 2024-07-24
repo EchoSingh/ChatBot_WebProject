@@ -63,7 +63,7 @@ You need to have Node.js and npm installed on your machine. You can download the
 1. Clone the repo
 
 ```sh
-git clone https://github.com/aditya26062003/AI-ChatBot.git
+git clone https://github.com/EchoSingh/AI-ChatBot.git
 ```
 
 2. Navigate to the project directory
